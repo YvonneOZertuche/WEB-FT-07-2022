@@ -1,0 +1,29 @@
+h1, h2{
+  color: purple;
+}
+div{
+  background-color: cyan;
+  border: 2px solid black;
+  /* padding:10px; */
+  margin: 20px; 
+  /* width: 200px;
+  height: 200px; */
+}
+
+span{
+  background-color: yellow;
+  border: 2px solid black;
+  /* padding:10px; */
+  margin: 20px;
+  /* width: 200px;
+  height: 200px; */
+  display: block;
+}
+
+a{
+  background-color: orange;
+  border: 2px solid orange;
+  /* padding:10px;
+  margin: 20px; */
+}
+
