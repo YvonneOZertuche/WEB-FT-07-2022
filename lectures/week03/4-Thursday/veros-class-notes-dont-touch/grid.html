@@ -13,7 +13,7 @@
       <!--Responsive Grid: col-md, col-xs, col-lg, col-sm col-4-->
       
         <div class="row">
-            <div class="" style="border: 1px solid black">
+            <div class="col-sm-6 col-md-9" style="border: 1px solid black">
                 <ul>
                     <li>6 colum  on small screen</li>
                     <li>8 column on medium screen</li>
@@ -22,7 +22,7 @@
                 </ul>
             </div>
 
-            <div class="" style="border: 1px solid black">
+            <div class="col-sm-6 col-md-3" style="border: 1px solid black">
                 <ul>
                     <li>6 column on small screens</li>
                     <li>4 column on medium screen</li>
@@ -64,28 +64,28 @@
         <br><br><br>
         <!--Equal Width Multi Row: w-100-->
       
-        <div class="">
-            <div style="border: 1px solid black">
+        <div class="row ">
+            <div class = "col bg-warning" style="border: 1px solid black">
                 <div>
                     Equal Width
                 </div>
             </div>
 
-            <div  style="border: 1px solid black">
+            <div class = "col-5" style="border: 1px solid black">
                 <div>
                     Equal Width
                 </div>
             </div>
-            <div  style="border: 1px solid black">
+            <div class="col-5" style="border: 1px solid black">
                 spans 100%
             </div> 
-            <div  style="border: 1px solid black">
+            <div class="col=5"  style="border: 1px solid black">
                 <div>
                     Equal Width
                 </div>
             </div>
 
-            <div  style="border: 1px solid black">
+            <div class="col"  style="border: 1px solid black">
                 <div>
                     Equal Width
                 </div>
@@ -96,20 +96,20 @@
         <br><br><br>
         <!--Auto Layout: col-6, col-4, col-->
       
-        <div class="">
-            <div class="" style="border: 1px solid black">
-                <div>
-                    Equal Width
-                </div>
-            </div>
-
+        <div class="row">
             <div class="col-6" style="border: 1px solid black">
                 <div>
                     Equal Width
                 </div>
             </div>
 
-            <div class="" style="border: 1px solid black">
+            <div class="col-4" style="border: 1px solid black">
+                <div>
+                    Equal Width
+                </div>
+            </div>
+
+            <div class="col" style="border: 1px solid black">
                 <div>
                     Equal Width
                 </div>
@@ -120,26 +120,26 @@
 
         <!--Equal Width Stacked: col-sm-->
       
-         <div class="">
-            <div class="" style="border: 1px solid blue">
+         <div class="row">
+            <div class="col-sm-12 col-md" style="border: 1px solid blue">
                 <div>
                     Equal Width
                 </div>
             </div>
 
-            <div class="" style="border: 1px solid yellow">
+            <div class="ol-sm-12 col-md" style="border: 1px solid rgba(74, 104, 22, 0.932)">
                 <div>
                     Equal Width
                 </div>
             </div>
 
-            <div class="" style="border: 1px solid black">
+            <div class="" style="border: 1px solid red">
                 <div>
                     Equal Width
                 </div>
             </div>
 
-            <div class="" style="border: 1px solid black">
+            <div class="" style="border: 1px solid purple">
                 <div>
                     Equal Width
                 </div>
@@ -150,20 +150,20 @@
         <br><br><br>
         <!--Ordering: col order-3, order-2, order-1-->
       
-        <div class="">
-            <div class="" style="border: 1px solid black">
+        <div class="row">
+            <div class="col order-2" style="border: 1px solid orange">
                 <div>
                     First
                 </div>
             </div>
 
-            <div class="" style="border: 1px solid black">
+            <div class="col order-1" style="border: 1px solid black">
                 <div>
                     Second
                 </div>
             </div>
 
-            <div  class="" style="border: 1px solid black">
+            <div  class="co order-1" style="border: 1px solid black">
                 <div>
                     Third
                 </div>
@@ -176,24 +176,24 @@
         <br><br><br>
         <!--Offset-->
       
-         <div class="">
+         <div class="row">
             
-            <div class="" style="border: 1px solid black">
+            <div class="col-6 offset-3" style="border: 1px solid black">
                 
                     6 column div offset by 3 [.col-md-6 .offset-md-3]
                 
             </div>
         </div>
 
-         <div class="">
+         <div class="row">
         
-                <div class="" style="border: 1px solid black">
+                <div class="col-4" style="border: 1px solid black">
                     
                         2 4 column divs, the second offset by 4
                     
                 </div>
             
-                <div  class="" style="border: 1px solid black">
+                <div  class="col-4 offset-4" style="border: 1px solid black">
                     
                         2 4 column divs, the second offset by 4
                     
@@ -202,14 +202,14 @@
                 
             </div>
 
-        <div class="">
-            <div class="" style="border: 1px solid black">
+        <div class="row">
+            <div class="col-3 offset-3" style="border: 1px solid blue">
                 
                     2 3 column divs, both offset by 3
                 <img src="" class="glyphicon glyphicon-envelope" alt="">
             </div>
         
-            <div class=""style="border: 1px solid black">
+            <div class="col-3 offset-3 "style="border: 1px solid red">
                 
                     2 3 column divs, both offset by 3
                 
@@ -221,11 +221,13 @@
         <br><br><br>
         <!--Nested Column-->
       
-         <div class="">
-            <div class="" style="border: 1px solid black">
-                
-                   <div class="">
-                       <div class="">
+         <div class="row">
+            <div class="">
+                inner column - 6
+            </div>    
+            <div class="col-6 offset-3" style="border: 1px solid black">            
+                   <div class="row">
+                       <div class="col-6 bg-warning">
                            inner column - 6
                        </div>
 
