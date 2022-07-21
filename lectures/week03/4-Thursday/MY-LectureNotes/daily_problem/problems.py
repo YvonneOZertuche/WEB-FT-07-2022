@@ -1,8 +1,13 @@
 
 
 
-#1. Given a list ["Elie", "Tim", "Matt"], return a new list with only the first letter (["E", "T", "M"])
-
+# #1. Given a list ["Elie", "Tim", "Matt"], return a new list with only the first letter (["E", "T", "M"])
+# olist = ["Eli", "Tim", "Matt"]
+# # firstLetter = []
+# n_list = []
+# for i in 
+    
+    
 #2. Print out the numbers 1-10 from the list below
 nums = [
     {"num": 1},
@@ -16,6 +21,9 @@ nums = [
     {"num": 9},
     {"num": 10},
 ]
+for i in nums:
+    print(i['num'])
+    
 
 #3. Given two lists ["CA", "NJ", "RI"] and ["California", "New Jersey", "Rhode Island"] return a dictionary that looks like this {'CA': 'California', 'NJ': 'New Jersey', 'RI': 'Rhode Island'}
 
