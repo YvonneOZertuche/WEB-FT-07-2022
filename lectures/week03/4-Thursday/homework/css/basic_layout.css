@@ -1,0 +1,12 @@
+.container{
+  border: solid 10px orange;
+  background-color: blue;
+}
+
+body{
+  background-color: cornflowerblue;
+}
+
+.row{
+  border: sollid 2 px;
+}
