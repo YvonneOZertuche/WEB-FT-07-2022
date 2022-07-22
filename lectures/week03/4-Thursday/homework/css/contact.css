@@ -7,11 +7,13 @@ body{
  margin:0;
 }
 
-.mb-3{
-  /* padding-top: 25px; */
+
+.container{
+ 
   padding-bottom: 25px;
 }
 
-.form-label{
-  
+.mb-3{
+  padding:0;
+  margin: 0;
 }
