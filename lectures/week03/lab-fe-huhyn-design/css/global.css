@@ -1,0 +1,50 @@
+/* black - #000000  
+navy - #14213D
+gold - #FCA311  (accent)
+light gray - #E5E5E5 
+white = #FFFFFF */
+
+
+/* background colors */
+
+
+/* font colors */
+.text-black {
+  color: black;
+}
+
+.text-navy {
+  color: #14213d;
+}
+
+.text-accent {
+  color: #fca311;
+}
+
+.text-accent a {
+  color: #fca311;
+}
+
+.text-accent a:hover {
+  color: #e5e5e5;
+}
+
+.text-lightGray {
+  color: #e5e5e5;
+}
+
+.text-white {
+  color: white;
+}
+.parallax{
+  background-image: url("https://www.sunnysidecircus.com");
+  min-height: 700px;
+
+ 
+  /* create parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
