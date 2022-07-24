@@ -13,7 +13,7 @@ print(last_name)
 # Create a new varaiable called my_name and set the value to the concatenation of your first name and your last name 
 my_name = first_name + " " + last_name
 # print "My name is ???" out to the console.  Substitue the ??? with the my_name variable.
-print(my_name)
+print(f"My name is {my_name}")
 # create a variable called company_name and set the value to "DigitalCrafts"
 company_name = "DigitalCrafts"
 
