@@ -50,22 +50,50 @@ let sum = a + b
 // } else {
 //   alert('Unknown month!')
 // }
-let month = 9
+// let month = 9
 
-let numDays = 31
+// let numDays = 31
 
-switch (month) {
-  case 4:
-  case 6:
-  case 9:
-  case 11:
-    numDays = 30;
-    break;
-  case 2:
-    numDays = 28
-    break
-  default:
-    break
+// switch (month) {
+//   case 4:
+//   case 6:
+//   case 9:
+//   case 11:
+//     numDays = 30;
+//     break;
+//   case 2:
+//     numDays = 28
+//     break
+//   default:
+//     break
+// }
+
+// console.log(`This month has ${numDays}`)
+
+
+// for the numbers 1 -20 print all the even numbers
+
+// //!WHILE LOOP
+// let num = 0
+// while (num < 20){
+//   if (num %2  == 0)
+//   console.log(num)
+//   num +=1
+// }
+
+// //!FOR LOOP
+// for (num = 0; num < 20; num++){
+//   if (num % 2 == 0) console.log(num)
+//   num += 1
+
+// }
+// FizzBuzz
+// Use a for loop to print out all the numbers 1 to 30, but insert the word fizz for any number that is divisible by 3, insert the word buzz for any number that is divisible by 5 and insert the word fizz buzz for any numbers that are both divisible by 3 and 5, like 15.
+
+for (num = 1; num < 31; num++) {
+  if (num % 3 == 0 && num % 5 == 0)
+    console.log('FIZZ BUZZ')
+  else if (num % 3 == 0) console.log(num, 'Fizz')
+  else if (num % 5 == 0) console.log(num, 'Buzz')
+  else console.log(num)
 }
-
-console.log(`This month has ${numDays}`)
