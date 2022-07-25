@@ -14,9 +14,9 @@ for(let i = 1; i <= 10; i++){
 
 ```
 
-</details>
+// </details>
 
-## . The loop below loops from 0 to 3. Edit it to loop backwards from 3 to 0
+// ## . The loop below loops from 0 to 3. Edit it to loop backwards from 3 to 0
 
 ```js
 for (let counter = 0; counter < 4; counter++){
