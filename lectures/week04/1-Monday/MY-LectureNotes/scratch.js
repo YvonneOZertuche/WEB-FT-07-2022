@@ -1,18 +1,11 @@
+// Every second letter of a string is replaced with a capital 'Z'
 
-// FizzBuzz
-// Use a for loop to print out all the numbers 1 to 30, but insert the word fizz for any number that is divisible by 3, insert the word buzz for any number that is divisible by 5 and insert the word fizz buzz for any numbers that are both divisible by 3 and 5, like 15.
+let str1 = "javascript";
+count = str1.length
+// console.log(count)
+let splitString = str1.split('')
+console.log(splitString)
+for (count = 0; count <= 10; count ++){
+   str1.split(' ');
 
-for (num = 1; num < 30; num++){
-  if (num % 3 == 0) 
-    console.log(num,"fizz")
-
- else if (num % 5 == 0)
-    console.log(num,"buzz")
-
- else if (num % 3 &&  num % 5)
-    console.log("FIZZ BUZZ")   
-  
-
- }   
-
-
+}

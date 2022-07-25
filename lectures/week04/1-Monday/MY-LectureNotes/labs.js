@@ -97,3 +97,17 @@ for (num = 1; num < 31; num++) {
   else if (num % 5 == 0) console.log(num, 'Buzz')
   else console.log(num)
 }
+// Example output:
+// jZvZsZrZpZ OR each letter on a new line
+// HINT: You can use  if((i+1) % 2 == 0) to check for even indexes
+
+
+
+
+
+var str1 = 'javascript'.split('')
+
+for (var i = 1; i < str1.length; i += 2) {
+  str1[i] = 'z'
+}
+console.log(str1.join(''))
