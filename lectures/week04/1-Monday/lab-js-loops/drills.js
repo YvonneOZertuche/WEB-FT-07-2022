@@ -31,11 +31,20 @@
 // }
 //  console.log(product)
 
-let salary = 58000
-// let newSalary = 58
-for (let i = 0; i <= 4; i++){
- salary = (salary * 0.02 ) + salary
-//  console.log(salary)
+// let salary = 58000
+// // let newSalary = 58
+// for (let i = 0; i <= 4; i++){
+//  salary = (salary * 0.02 ) + salary
+// //  console.log(salary)
 
+// }
+// console.log(salary)
+let sum = 0
+let n  = 10
+for (let i = 0; i <= n; i++){
+  if (i % 2 == 0){
+    sum = sum + i
+    
+  }   
 }
-console.log(salary)
+console.log(sum)
