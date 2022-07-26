@@ -39,12 +39,20 @@
 
 // }
 // console.log(salary)
-let sum = 0
-let n  = 10
-for (let i = 0; i <= n; i++){
-  if (i % 2 == 0){
-    sum = sum + i
-    
-  }   
-}
-console.log(sum)
+// let sum = 0
+// let n  = 10
+// for (let i = 0; i <= n; i++){
+//   if (i % 2 == 0){
+//     sum = sum + i
+//     console.log(i)
+//   }   
+// }
+// console.log(sum)
+
+// let num = 100
+// console.log(num.toString().length)
+
+let num = 45623556567822
+
+let stringOne = num.toString()
+console.log(`The first number is ${stringOne[0]} and the last number is ${stringOne[stringOne.length - 1]}`);
