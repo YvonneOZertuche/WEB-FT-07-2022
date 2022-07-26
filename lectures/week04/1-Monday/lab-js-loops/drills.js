@@ -52,7 +52,60 @@
 // let num = 100
 // console.log(num.toString().length)
 
-let num = 45623556567822
+// let num = 45623556567822
 
-let stringOne = num.toString()
-console.log(`The first number is ${stringOne[0]} and the last number is ${stringOne[stringOne.length - 1]}`);
+// let stringOne = num.toString()
+// console.log(`The first number is ${stringOne[0]} and the last number is ${stringOne[stringOne.length - 1]}`);
+
+//& 2 Numbers
+// Write a function called checkNums that accepts two arguments n1 and n2. The function should check the two numbers and return true if one of the numbers is 100 or if the sum of the two numbers is 100
+// function checkNums(num1, num2){
+//   if ((num1 == 100 || num2 == 100 ) || (num1 + num2 == 100)){
+//       return true
+//   }
+//   return false
+// }
+// console.log(checkNums(50,50))
+
+//Write a for loop that writes out the decimal equivalent of the reciprocals 1/2, 1/3, 1/4, ... , 1/19, 1/20.
+// for (i = 1; i <= 20; i++){
+//   console.log((`1/${i}`))
+// }
+
+// Write a program to find sum of first and last digit of a number.
+// let num = 45623556567822
+// let stringOne = num.toString()
+// console.log(`The first number is ${stringOne[0]} and the last number is ${stringOne[stringOne.length - 1]}`)
+// let sum = stringOne[0] + stringOne[stringOne.length - 1]
+// console.log(sum)
+
+// Looping through a string
+// Create a for loop to print out all the letters in the word 'love' (one letter per line)
+
+// let word = 'love'
+
+// for (let i = 0; i < word.length; i++){
+//   console.log(word)
+// }
+// Use a for loop to print out the spelling of the word mississippi with one letter on each line.
+
+// let word = "mississippi"
+
+// for (i = 0; i < word.length; i++){
+//   console.log(word[i])
+// }
+
+let str2 = "don't know why";
+let haveY= false
+
+for (let i = 0; i < str2.length; i++){
+  if(str2[i]  == 'y'){
+    haveY = true
+  }
+}
+if (haveY == true){
+  console.log("yes")
+}
+else{
+  console.log("no")
+}
