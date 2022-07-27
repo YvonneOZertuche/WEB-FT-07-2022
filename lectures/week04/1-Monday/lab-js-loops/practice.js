@@ -57,4 +57,28 @@
 //     console.log(arr[i])
 //   }
 // }
+// Print each number that is greater than zero
+// arr = [4, 2, -5, 7, -23, 6, -5]
+// for (i = 0; i < arr.length; i++){
+//   if (arr[i] > 0){
+//     console.log(arr[i])
+//   }
+// }
 
+// For all the numbers between 1 and 100, return a list with all the numbers that are divisible by 12 ([12, 24, 36, 48, 60, 72, 84, 96]).
+// let newArray = []
+// for (i = 1; i < 100; i++){
+//   if (i  % 12 == 0){
+  
+//   console.log(i)
+//   }
+// }
+
+//  Given a list [1,2,3,4], print out all the values in the list multiplied by 20.
+let list = [1, 2, 3, 4]
+let multipliers = []
+for(let i = 0; i < list.length; i++){
+ list[i] *= 20
+  console.log(list[i])
+}
+// console.log(multipliers)
