@@ -2,29 +2,30 @@
 function greeting(){
   console.log("hello World")
 }
-greeting()
+
 // #* 2. Execute (call/ run) the "greeting function"
+greeting()
 
 // #* 3. Reduce this code using functions
 
-print("Day 1: Students in SRE class")
-print("lecture: git 101")
-print("Shu")
-print("Thomas")
-print("Gustavo")
-print("Alim")
-print("Day 2: Students in SRE class")
-print("lecture: git 102")
-print("Shu")
-print("Thomas")
-print("Gustavo")
-print("Alim")
-print("Day 3: Students in SRE class")
-print("lecture: python 101")
-print("Shu")
-print("Thomas")
-print("Gustavo")
-print("Alim")
+// print("Day 1: Students in SRE class")
+// print("lecture: git 101")
+// print("Shu")
+// print("Thomas")
+// print("Gustavo")
+// print("Alim")
+// print("Day 2: Students in SRE class")
+// print("lecture: git 102")
+// print("Shu")
+// print("Thomas")
+// print("Gustavo")
+// print("Alim")
+// print("Day 3: Students in SRE class")
+// print("lecture: python 101")
+// print("Shu")
+// print("Thomas")
+// print("Gustavo")
+// print("Alim")
 
 
 // #? Nested Functions
