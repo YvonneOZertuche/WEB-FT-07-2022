@@ -11,7 +11,8 @@
       <form method="post" action="#">
 
         <label for="username">Create a username: </label>
-        <input type="text" id="username" /><div id="feedback"></div>
+        <input type="text" id="username" />
+        <div id="feedback"></div>
 
         <label for="password">Create a password: </label>
         <input type="password" id="password" />
@@ -20,6 +21,37 @@
 
       </form>
     </div>
-    
+    <script>
+      let username = document.querySelector("#username")
+      let password = document.querySelector("#password")
+      let message = document.querySelector("#feedback")
+
+      const checkUsername = (e) =>{
+        console.log(username.value)
+        let userText = username.value
+      }
+
+      username.addEventListener("focus", (e)=>{
+          message.className = 'tip'
+          message.textContent = 'Username must be at least 5 characters'
+      }
+      )
+      
+      username.addEventListener('blur', (e)=>{
+        console.log(username.value)
+        let userText = username.value
+
+        if(userText.length < 5){
+          message.className = 'warning'
+          message.textContent = 'Your username is not long enough. '
+        }
+        else {
+          message.textContent = " "
+        }
+        }
+      )
+
+      username.addEventListener('blur', checkUsername)
+    </script>
   </body>
 </html>

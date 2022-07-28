@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
+
     <div id="page">
       <h1></h1>
       <form id="messageForm">
@@ -15,5 +16,33 @@
       </form>
     </div>
     
+    <script>
+    let message = document.querySelector('#message')
+    let charactersLeft = document.querySelector('#charactersLeft')
+    let lastkey = document.querySelector('#lastkey')
+
+    message.addEventListener('keyup', e=>{
+
+        let textEntered;
+        
+        let counter = 0; 
+
+        textEntered = message.value      
+        console.log(message.value)
+
+        counter = 180 - textEntered.length
+        console.log(textEntered.length)
+        console.log(counter)
+
+        charactersLeft.textEntered = `${counter.toString()} characters. `
+
+        // lastkey.textContent = `Last key in ASCII code ${}
+
+        if (textEntered.length > 180){
+          
+        }
+
+      })
+    </script>
   </body>
 </html>
