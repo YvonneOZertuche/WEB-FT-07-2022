@@ -95,17 +95,55 @@
 //   console.log(word[i])
 // }
 
-let str2 = "don't know why";
-let haveY= false
+// let str2 = "don't know why";
+// let haveY= false
 
-for (let i = 0; i < str2.length; i++){
-  if(str2[i]  == 'y'){
-    haveY = true
+// for (let i = 0; i < str2.length; i++){
+//   if(str2[i]  == 'y'){
+//     haveY = true
+//   }
+// }
+// if (haveY == true){
+//   console.log("yes")
+// }
+// else{
+//   console.log("no")
+// }
+
+// let array = [1, 3, 5, 8, 12]
+// let sum = 0
+// for (let i = 0; i < array.length; i++){
+//   sum += array[i]
+  
+// }
+// console.log(sum)
+let sales = [
+  17.2,
+  16.5,
+  18.3,
+  19.3,
+  17.8,
+  21.3,
+  22.4,
+  22.0,
+  19.9,
+  23.3,
+  21.7,
+  22.2
+]
+
+let min = sales[0]
+let max = sales[0]
+let sum = 0
+for (let i = 1; i < sales.length; i++){
+  if (sales[i] < min){
+    min = sales[i]
+    console.log(min);
+
+  
+    (sales[i] > max);
+    console.log(max);
+  
+    }
   }
-}
-if (haveY == true){
-  console.log("yes")
-}
-else{
-  console.log("no")
-}
+ 
