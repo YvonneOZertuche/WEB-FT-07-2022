@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        const getData = async (url) => { 
+
+            try{
+                let results = await fetch(url)
+                let data = await results.json(); 
+
+                console.log(data)
+            }
+            catch(error){
+                console.dir(error)
+            }
+
+         }
+
+         getData("https://random-data-api.com/api/address/random_address")
+    </script>
+</body>
+</html>
