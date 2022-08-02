@@ -9,10 +9,14 @@ var obj = {
     z: 3
 }
 
+const mult = (obj)=> {
+    let{x,y,z} = obj
+
+
+    return x*y*z
+}
 
 console.log(mult(obj));
-
-
 
 /*
 Create shortPerson() function that will destructure each person object.
@@ -40,15 +44,13 @@ var person2 = {
     }
 }
 
-const person = obj => {
-    let {name:n, info:{country:c, age:a}, postsQuantitiy:p=0} = obj
-
-    console.log(n, c, a, p);
-}
-
 person(person1)
+const person = (obj) => {
+    let {name:n, info:{country:c, age:a}, postsQuantity:p=0} = obj
+    console.log(`${n}, ${c}, ${a}, ${p}`)
 
-
+}
+person(person2)
 /**
  * This function uses destructuring for argument parsing. But it has a problem: it crashes when the caller passes an option object without an enable property. Since all options have defaults, we'd like to not crash in this case. Can you think of a clean way to fix this problem?
  */
