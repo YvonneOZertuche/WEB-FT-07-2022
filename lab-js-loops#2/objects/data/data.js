@@ -1,22 +1,22 @@
 
 module.exports = {
-    addresses : require('./addressData'),
-    appliances : require('./appliancesData'),
-    banks : require('./bankData'),
-    beers : require('./beerData'),
+    address : require('./addressData'),
+    appliance : require('./appliancesData'),
+    bank : require('./bankData'),
+    beer : require('./beerData'),
     coffee : require('./coffeeData'),
     commerce : require('./commerceData'),
-    companies : require('./companyData'),
-    computers : require('./randomComputerData'),
-    cryptoCoins : require('./cryptoCoinData'),
-    desserts : require('./randomDessertData'),
-    hipsters : require('./hipsterData'),
-    users : require('./userData'),
+    compana : require('./companyData'),
+    randomComputer : require('./randomComputerData'),
+    cryptoCoin : require('./cryptoCoinData'),
+    dessert : require('./randomDessertData'),
+    hipster : require('./hipsterData'),
+    user : require('./userData'),
     loremIpsum : require('./loremIpsumData'),
-    vehicles : require('./vehicleData'),
-    restaurants : require('./restaurantData'),
-    nations : require('./nationData'),
-    subscriptions : require('./subscriptionData')
+    vehicle : require('./vehicleData'),
+    restaurant : require('./restaurantData'),
+    nation : require('./nationData'),
+    subscription : require('./subscriptionData')
 }
 
 

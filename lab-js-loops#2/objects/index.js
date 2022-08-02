@@ -4,37 +4,13 @@ const data = require('./data/data')
 
 //  console.log(data.subscription);
 
-
-//? 1. Extract the following from the appliance object 
-
-//* brand
-//* equipment
-
-// format the information as follows: 
-// A ::brand ::equipement
-
-//* i.e. A Blue Star Dishwasher
-
-let appliance = {
-  id: 6877,
-  uid: '6ced25ea-78c4-4b97-88f9-01ca36599075',
-  brand: 'Blue Star',
-  equipment: 'Dishwasher'
-}
-
-//? 1b. Loop through the  appliances array of objects and the same information as in part 1a for each appliance in the array 
-
-let appliances = data.appliances;
-
-
-//? 2a. Extract the following from the dessert object 
+//? 1a. Extract the following from the dessert object 
 //* variety 
 //* topping
 //* flavor
 
 // format the information as follows: 
 // ::flavor ::variety with ::topping
-
 //* i.e.  Salted Caramel Doughnut with Whipped Cream
 
 let dessert = {
@@ -45,12 +21,12 @@ let dessert = {
     flavor: 'Salted Caramel'
 }
 
-//? 2b. Loop through the  desserts array of objects and the same information as in part 2a for each dessert in the array
+//? 1b. Loop through the  dessertData array of objects and the same information as in part 1a for each dessert in the array
 
-let dessers = data.desserts; 
+let desserData = data.desserData; 
 
 
-//? 3a. Extract the following from the beer object 
+//? 2a. Extract the following from the beer object 
 let beer = {
     id: 6078,
     uid: '6fed8449-9514-479e-b659-892dd363a0b6',
@@ -75,16 +51,15 @@ let beer = {
 
 // format the information as follows: 
 // ::name ::brand is a ::style with a ::alcohol alcohol content. It features a ::hop hop and ::malt malt with a ::yeast yeast.
-
 //* i.e.  Pliny the Elder Lowenbrau is a Strong Ale with a 8.6% alcohol content. It features a Sorachi Ace hop and Chocolate malt with a 3068 - Weihenstephan Weizen yeast. 
 
 
-//? 3b. Loop through the  beers array of objects and the same information as in part 3a for each beer in the array 
+//? 2b. Loop through the  beerData array of objects and the same information as in part 2a for each beer in the array 
 
-let beers = data.beers;
+let beerData = data.beerData;
 
 
-//? 4a. Extract the following from the coffee object 
+//? 3a. Extract the following from the coffee object 
 
 //* blend_name 
 //* origin
@@ -93,7 +68,6 @@ let beers = data.beers;
 
 // format the information as follows: 
 // ::blend_name from ::origin is a :;variety with notes of: ::notes
-
 //* i.e.  Postmodern Enlightenment from Tapanuli, Sumatra is a Yellow Bourbon with notes of: lingering, juicy, meyer lemon, vanilla, dates
 
 let coffee = {
@@ -106,23 +80,38 @@ let coffee = {
     intensifier: 'clean'
 }
 
-//? 4b. Loop through the  coffeeData array of objects and the same information as in part 4a for each coffee in the array 
+//? 3b. Loop through the  coffeeData array of objects and the same information as in part a for each coffee in the array 
 
-let coffeeData = data.coffee;
+let coffeeData = data.coffeeData;
 
 
-//? 5a. Extract the following from the bank object 
-//* bank_name 
-//* routing_number
+//? 4a. Extract the following from the address object 
+
+//* variety 
+//* topping
+//* flavor
 
 // format the information as follows: 
-// ::bank_name
-// account number ::account_number 
-// routing number ::routing_number
+//* flavor variety with topping
+// i.e.  Salted Caramel Doughnut with Whipped Cream 
+let appliances = {
+    id: 6877,
+    uid: '6ced25ea-78c4-4b97-88f9-01ca36599075',
+    brand: 'Blue Star',
+    equipment: 'Dishwasher'
+}
 
-//* i.e.  ABN AMRO MEZZANINE (UK) LIMITED
-//*       account number: 0111327040
-//*       routing number: 672419029
+//? 4b. Loop through the  dessertData array of objects and the same information as in part a for each dessert in the array 
+
+
+//? 5a. Extract the following from the address object 
+//* variety 
+//* topping
+//* flavor
+
+// format the information as follows: 
+//* flavor variety with topping
+// i.e.  Salted Caramel Doughnut with Whipped Cream
 
 let bank = {
     id: 305,
@@ -134,22 +123,18 @@ let bank = {
     swift_bic: 'BCYPGB2LCBB'
 }
 
-//? 5b. Loop through the  banks array of objects and the same information as in part 5a for each bank in the array 
-
-let banks = data.banks;
+//? 5b. Loop through the  dessertData array of objects and the same information as in part a for each dessert in the array 
 
 
-//? 6a. Extract the following from the subscription object 
+//? 6a. Extract the following from the address object 
 
-//* subscription_term
-//* payment_term
-//* payment_method
-
+//* variety 
+//* topping
+//* flavor
 
 // format the information as follows: 
-// ::subscription_term ::payment_term Subscription with ::payment_method
-
-//* i.e.  Biennal Monthly Subscription with Apple Pay
+//* flavor variety with topping
+// i.e.  Salted Caramel Doughnut with Whipped Cream
 
 let subscription = {
     id: 757,
@@ -161,30 +146,18 @@ let subscription = {
     payment_term: 'Monthly'
 }
 
-//? 6b. Loop through the  subscriptions array of objects and the same information as in part 6a for each subscription in the array 
+//? 6b. Loop through the  dessertData array of objects and the same information as in part a for each dessert in the array 
 
-let subscriptions = data.subscriptions
 
-//? 7a. Extract the following from the nation object 
+//? 7a. Extract the following from the address object 
 
-//* nationality
-//* language
-//* capital
-//* national_sport
-//* flag
+//* variety 
+//* topping
+//* flavor
 
 // format the information as follows: 
-// nationality: ::nationality 
-// language: ::language 
-// capital: ::capital
-// national sport: ::national_sport
-// flag: ::flag
-
-//* i.e. nationality: Sudanese 
-//* language: Zulu 
-//* capital: Bucharest
-//* national sport: golf
-//* flag: 🇲🇨
+//* flavor variety with topping
+// i.e.  Salted Caramel Doughnut with Whipped Cream
 
 let nation = {
     id: 9510,
@@ -196,21 +169,20 @@ let nation = {
     flag: '🇲🇨'
 }
 
-//? 7b. Loop through the  nations array of objects and the same information as in part 7a for each nation in the array 
+//? 7b. Loop through the  dessertData array of objects and the same information as in part a for each dessert in the array 
 
-let nations = data.nations;
 
-//? 8a. Extract the following from the computer object
+//? 8a. Extract the following from the address object
 
-//* platform
-//* type
-//* os
+//* variety 
+//* topping
+//* flavor
 
 // format the information as follows: 
-// A ::platform ::type running ::os
-//* i.e.  A Windows server running Windows 7
+//* flavor variety with topping
+// i.e.  Salted Caramel Doughnut with Whipped Cream
 
-let computer = {
+let randomComputer = {
     id: 7380,
     uid: 'd6725475-1872-4d1e-a1da-8f64086fceb2',
     platform: 'Windows',
@@ -219,24 +191,18 @@ let computer = {
     stack: 'macOS, Mojave (10.14)'
 }
 
-//? 8b. Loop through the  computers array of objects and the same information as in part 8a for each computer in the array 
-
-let computers = data.computers;
+//? 8b. Loop through the  dessertData array of objects and the same information as in part a for each dessert in the array 
 
 
-//? 9a. Extract the following from the commerce object
+//? 9a. Extract the following from the address object
 
-//* department
-//* material
-//* color
-//* product_name
-//* price
-//* promo_code
+//* variety 
+//* topping
+//* flavor
 
 // format the information as follows: 
-// Blowout sale in the ::department Department! Get ::material, ::color ::product_name for only $::price! Use promo code: ::promo_code (while supplies last)
-
-//* Blowout sale in the Toys Department! Get Leather, amethyst Incredible Linen Shoes for only $33.32! Use promo code: PremiumDiscount379839 (while supplies last)
+//* flavor variety with topping
+// i.e.  Salted Caramel Doughnut with Whipped Cream
 
 let commerce = {
     id: 1699,
@@ -250,26 +216,17 @@ let commerce = {
     promo_code: 'PremiumDiscount379839'
 }
 
-//? 9b. Loop through the  commerceData array of objects and the same information as in part 9a for each commerce in the array 
-
-let commerceData = data.commerce;
+//? 9b. Loop through the  dessertData array of objects and the same information as in part a for each dessert in the array 
 
 
-//? 10a. Extract the following from the company object
-
-//* business_name
-//* catch_phrase
-//* full_address
-//* phone_number
+//? 10a. Extract the following from the address object 
+//* variety 
+//* topping
+//* flavor
 
 // format the information as follows: 
-// ::business_name --- ::catch_phrase 
-// ::full_address 
-// ::phone_number
-
-//* i.e.  Schneider, Ruecker and Lueilwitz, Inc --- Secured homogeneous moratorium 
-//* 524 Sau Key, Port Bertram, WY 38185 
-//* 597 376-192-9487
+//* flavor variety with topping
+// i.e.  Salted Caramel Doughnut with Whipped Cream
 
 let company = {
     id: 4253,
@@ -290,24 +247,24 @@ let company = {
     longitude: 159.47558427151534
 }
 
-//? 10b. Loop through the  companies array of objects and the same information as in part 10a for each comany in the array 
-
-let companies = data.companies;
+//? 10b. Loop through the  dessertData array of objects and the same information as in part a for each dessert in the array 
 
 
 //? 11. Extract the following from the address object 
 
-//* street_name 
-//* city 
-//* state_abbr
-//* zip_code
+// - street_name 
+// - zip_code 
+// - state 
+// - country
+// - full_address
+
+//* variety 
+//* topping
+//* flavor
 
 // format the information as follows: 
-// ::street_address
-// ::city ::state_abbr, ::zip_code
-
-//* i.e.  36661 Petra Falls
-//* West Kareem FL, 84730
+//* flavor variety with topping
+// i.e.  Salted Caramel Doughnut with Whipped Cream
 
 let address = {
     id: 502,
@@ -335,49 +292,20 @@ let address = {
     full_address: 'Apt. 112 80931 Briana Green, South Joelfurt, NE 13161'
 }
 
-//? 11b. Loop through the  addresses array of objects and the same information as in part 11a for each dessert in the array 
+//? 11b. Loop through the  dessertData array of objects and the same information as in part a for each dessert in the array 
 
-let addresses = data.addresses;
 
-//? 12a. Extract the following from the restaurant object 
+//? 12a. Loop through the array of objects called addressData and extract the same data as above
 
+//* variety 
+//* topping
+//* flavor
 
 // format the information as follows: 
-// ::type
-// ::name
-// ::address
-// ::phone_number
-// 
-// ::description 
-// ::review 
-//
-// ::monday
-// ::tuesday
-// ::wednesday
-// ::thursday
-// ::friday
-// ::saturday
-// ::sunday
+//* flavor variety with topping
+// i.e.  Salted Caramel Doughnut with Whipped Cream
 
-// i.e.
-//* Mexican Restaurant
-//* Smokestack Juice Bar
-//* 196 Daren Keys, New Antoineton, MT 41318-1631
-//* 678-444-2997 x39368
-//* 
-//*  ...description 
-//*  ...review 
-//*
-//* monday: 9:28 AM - 12:52 PM
-//* tuesday: 8:41 AM - 11:24 PM
-//* wednesday: 11:11 AM - 2:47 PM
-//* thursday: 8:30 AM - 5:38 PM
-//* friday: 6:47 AM - 5:48 PM
-//* saturday: 10:33 AM - 1:38 PM
-//* sunday: 7:55 AM - 4:13 PM
-
-
-
+ 
 let restaurant = {
     id: 8613,
     uid: 'd219f3e0-e021-4f79-9dcc-b4d87e051f14',
@@ -399,19 +327,14 @@ let restaurant = {
     }
 }
 
-//? 12b. Loop through the  restaurants array of objects and the same information as in part a for each restaurant in the array 
+//? 12b. Loop through the  dessertData array of objects and the same information as in part a for each dessert in the array 
 
-let restaurants = data.restaurants;
 
-//todo extra: sort by restruant type i.e. Mexician
+//? 13a. Extract the following from the address object 
 
-//? 13a. Extract the following from the vehicle object 
-
-//* 
-//* 
-//* 
-//* 
-//* 
+//* variety 
+//* topping
+//* flavor
 
 // format the information as follows: 
 //* flavor variety with topping
@@ -451,34 +374,18 @@ let vehicle = {
     license_plate: 'LPX-8269'
 }
 
-//? 13b. Loop through the dessertData array of objects and the same information as in part a for each dessert in the array 
-
-let vehicleData = data.vehicles;
+//? 13b. Loop through the  dessertData array of objects and the same information as in part a for each dessert in the array 
 
 
-//? 14a. Extract the following from the loremIpsum object 
+//? 14a. Extract the following from the address object 
 
-//* 
-//* 
-//* 
-//* 
+//* variety 
+//* topping
+//* flavor
 
 // format the information as follows: 
-// flavor variety with topping
-//* i.e.  
-
-//* 'Omnis modi expedita. Ullam quam dolorem. Sint eos iste. Voluptatem ut est. Nisi impedit nostrum. Iusto similique facere. Possimus dolores quia. Sit quibusdam ducimus. Laudantium explicabo ex.'
-//* 1. Dolorem libero nemo?,
-//* 2. Unde quidem dicta?,
-//* 3. Aut dicta ipsum?,
-//* 4. Expedita voluptate aspernatur?,
-//* 5. A praesentium accusantium?,
-//* 6. Illum explicabo voluptatem?,
-//* 7. Tempore commodi doloribus?,
-//* 8. Ducimus rem cum?,
-//* 9. Incidunt eum ad?,
-//* 10. Velit sit dolores?
-
+//* flavor variety with topping
+// i.e.  Salted Caramel Doughnut with Whipped Cream
 
 let loremIpsum = {
     id: 2650,
@@ -511,27 +418,16 @@ let loremIpsum = {
 
 //? 14b. Loop through the  dessertData array of objects and the same information as in part a for each dessert in the array 
 
-let loremIpsumData = data.loremIpsum
 
+//? 15a. Extract the following from the address object 
 
-//? 15a. Extract the following from the user object 
-
-//* 
+//* variety 
+//* topping
+//* flavor
 
 // format the information as follows: 
-// flavor variety with topping
-//* i.e.
-//*  Human Administration Representative
-//*  Emmanuel Zulauf 
-//*  1492 Zboncak Circle
-//*  New Denna, New York 16127
-//*  +503 794.101.0079 x98
-//*  email: emmanuel.zulauf@email.com
-//*  username: emmanuel.zulauf
-//*  password: CJ83jLRSlt
-//*  subscription plan: 'Free Trial' 
-//*  
-
+//* flavor variety with topping
+// i.e.  Salted Caramel Doughnut with Whipped Cream
 
 let user = {
     id: 2916,
@@ -570,29 +466,16 @@ let user = {
 
 //? 15b. Loop through the  dessertData array of objects and the same information as in part a for each dessert in the array 
 
-let userData = data.users;
 
+//?  16a. Extract the following from the address object
 
-//?  16a. Extract the following from the hipsterInfo object
-
-//* 
-
+//* variety 
+//* topping
+//* flavor
 
 // format the information as follows: 
-// flavor variety with topping
-//* i.e. 
-//* goth 
-//*
-//* Church-key kinfolk slow-carb. Park freegan fixie lo-fi iphone offal. Next level whatever scenester +1. Helvetica 3 wolf moon pug ramps roof umami brunch. Keffiyeh photo booth meh offal bicycle rights. Wolf kinfolk skateboard helvetica carry gentrify photo booth. Vinyl green juice chartreuse schlitz aesthetic beard ugh lomo. Viral venmo five dollar toast. Kogi green juice church-key selfies five dollar toast. Kinfolk tattooed food truck lumbersexual farm-to-table sustainable pop-up hammock. Mixtape narwhal pinterest wolf loko viral shoreditch.
-//* words:
-//* 1. ethical
-//* 2. cleanse
-//* 3. leggings
-//*
-//* sentences
-//* 1. Next level art party kogi shoreditch asymmetrical forage.
-//* 2. Forage readymade goth before they sold out chartreuse phlogiston.
-//* 3. Viral wayfarers fingerstache migas swag.
+//* flavor variety with topping
+// i.e.  Salted Caramel Doughnut with Whipped Cream
 
 let hipsterInfo = {
     id: 3828,
@@ -614,5 +497,3 @@ let hipsterInfo = {
 }
 
 //? 16b. Loop through the  dessertData array of objects and the same information as in part a for each dessert in the array 
-
-let hipsterData = data.hipsters;

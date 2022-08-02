@@ -9,6 +9,7 @@ Create new function and use it as a default parameter.
 */
 
 function square(a) {
+    console.log(a)
     console.log(a * a);
 }
 
