@@ -3,20 +3,20 @@
 Declare mult() function that will multiply values of the x,y,z 
 fields of the passed object
 */
-var obj = {
-    x: 5,
-    y: 20,
-    z: 3
-}
+// var obj = {
+//     x: 5,
+//     y: 20,
+//     z: 3
+// }
 
-const mult = (obj)=> {
-    let{x,y,z} = obj
+// const mult = (obj)=> {
+//     let{x,y,z} = obj
 
 
-    return x*y*z
-}
+//     return x*y*z
+// }
 
-console.log(mult(obj));
+// console.log(mult(obj));
 
 /*
 Create shortPerson() function that will destructure each person object.
@@ -44,12 +44,14 @@ var person2 = {
     }
 }
 
-person(person1)
+
 const person = (obj) => {
     let {name:n, info:{country:c, age:a}, postsQuantity:p=0} = obj
     console.log(`${n}, ${c}, ${a}, ${p}`)
 
 }
+person(person1)
+
 person(person2)
 /**
  * This function uses destructuring for argument parsing. But it has a problem: it crashes when the caller passes an option object without an enable property. Since all options have defaults, we'd like to not crash in this case. Can you think of a clean way to fix this problem?
@@ -67,5 +69,7 @@ person(person2)
                 "frobnifier:", frobnifier)
   }
   
+//   let {speed = 4, enable: hyperdrive = false, frobnifier = true}
+
   go({speed: 5})
 
