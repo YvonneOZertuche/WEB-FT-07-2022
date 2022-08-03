@@ -25,7 +25,11 @@ let appliance = {
 //? 1b. Loop through the  appliances array of objects and the same information as in part 1a for each appliance in the array 
 
 let appliances = data.appliances;
-
+for (let i = 0; i < appliances.length; i++){
+  // console.log(appliances[i].brand)
+  // console.log(appliances[i])
+  // console.log(`${appliances[i].brand}: ${appliances[i].equipment}`)
+}
 
 //? 2a. Extract the following from the dessert object 
 //* variety 
@@ -37,17 +41,17 @@ let appliances = data.appliances;
 
 //* i.e.  Salted Caramel Doughnut with Whipped Cream
 
-let dessert = {
-    id: 5166,
-    uid: '906882af-166c-4fc7-92c5-5e3b6687ba7b',
-    variety: 'Doughnut',
-    topping: 'Whipped Cream',
-    flavor: 'Salted Caramel'
-}
-
+// let dessert = {
+//     id: 5166,
+//     uid: '906882af-166c-4fc7-92c5-5e3b6687ba7b',
+//     variety: 'Doughnut',
+//     topping: 'Whipped Cream',
+//     flavor: 'Salted Caramel'
+// }
+// console.log(`${dessert.flavor} ${dessert.variety} with ${dessert.topping}`)
 //? 2b. Loop through the  desserts array of objects and the same information as in part 2a for each dessert in the array
 
-let dessers = data.desserts; 
+// let dessers = data.desserts; 
 
 
 //? 3a. Extract the following from the beer object 
@@ -81,9 +85,12 @@ let beer = {
 
 //? 3b. Loop through the  beers array of objects and the same information as in part 3a for each beer in the array 
 
-let beers = data.beers;
-
-
+// let beers = data.beers;
+// for(let i = 0; i < beers.length; i++){
+// console.log(`${beers[i].name} ${beers[i].brand} is a ${beers[i].style} with a ${beers[i].alcohol} content.  
+// It features a ${beers[i].hop} and ${beers[i].malt} with a ${beers[i].yeast}.
+// `)
+// }
 //? 4a. Extract the following from the coffee object 
 
 //* blend_name 
@@ -91,8 +98,10 @@ let beers = data.beers;
 //* variety
 //* notes
 
+
 // format the information as follows: 
 // ::blend_name from ::origin is a :;variety with notes of: ::notes
+
 
 //* i.e.  Postmodern Enlightenment from Tapanuli, Sumatra is a Yellow Bourbon with notes of: lingering, juicy, meyer lemon, vanilla, dates
 
@@ -105,11 +114,15 @@ let coffee = {
     notes: 'lingering, juicy, meyer lemon, vanilla, dates',
     intensifier: 'clean'
 }
+// console.log(`${coffee.blend_name} from ${coffee.origin} is a ${coffee.variety} with notes of ${coffee.notes}`)
 
 //? 4b. Loop through the  coffeeData array of objects and the same information as in part 4a for each coffee in the array 
 
 let coffeeData = data.coffee;
+// for (let i = 0; i < coffeeData.length; i++){
+// console.log(`${coffeeData[i].blend_name} from ${coffeeData[i].origin} is a ${coffeeData[i].variety} with notes ${coffeeData[i].notes}`)
 
+// }
 
 //? 5a. Extract the following from the bank object 
 //* bank_name 
@@ -133,11 +146,20 @@ let bank = {
     routing_number: '672419029',
     swift_bic: 'BCYPGB2LCBB'
 }
-
+// console.log(`${bank.bank_name} 
+// account number: ${bank.account_number} 
+// routing number: ${bank.routing_number}`)
 //? 5b. Loop through the  banks array of objects and the same information as in part 5a for each bank in the array 
 
-let banks = data.banks;
 
+// let banks = data.banks;
+// for (let i = 0; i < banks.length; i++){
+//   console.log(`${banks[i].bank_name} 
+// account number: ${banks[i].account_number} 
+// routing number: ${banks[i].routing_number}
+// `)
+
+// }
 
 //? 6a. Extract the following from the subscription object 
 
@@ -151,19 +173,24 @@ let banks = data.banks;
 
 //* i.e.  Biennal Monthly Subscription with Apple Pay
 
-let subscription = {
-    id: 757,
-    uid: '33806b73-8613-4d0b-b41b-fb447411c9c6',
-    plan: 'Free Trial',
-    status: 'Idle',
-    payment_method: 'Apple Pay',
-    subscription_term: 'Biennal',
-    payment_term: 'Monthly'
-}
-
+// let subscription = {
+//     id: 757,
+//     uid: '33806b73-8613-4d0b-b41b-fb447411c9c6',
+//     plan: 'Free Trial',
+//     status: 'Idle',
+//     payment_method: 'Apple Pay',
+//     subscription_term: 'Biennal',
+//     payment_term: 'Monthly'
+// }
+// console.log(`${subscription.subscription_term} ${subscription.payment_term} Subscription with ${subscription.payment_method}`)
 //? 6b. Loop through the  subscriptions array of objects and the same information as in part 6a for each subscription in the array 
 
-let subscriptions = data.subscriptions
+// let subscriptions = data.subscriptions
+// for (let i = 0; i < subscriptions.length; i++){
+//   console.log(`id:  ${subscriptions[i].id} 
+//   ${subscriptions[i].subscription_term} ${subscriptions[i].payment_term} with ${subscriptions[i].payment_method}
+//   `)
+// }
 
 //? 7a. Extract the following from the nation object 
 
@@ -195,10 +222,24 @@ let nation = {
     national_sport: 'golf',
     flag: '🇲🇨'
 }
-
+// console.log(`nationality: ${nation.nationality}
+// language: ${nation.language} 
+// capital: ${nation.capital} 
+// national spport: ${nation.national_sport} 
+// flag: ${nation.flag}`)
 //? 7b. Loop through the  nations array of objects and the same information as in part 7a for each nation in the array 
 
 let nations = data.nations;
+// for ( let i = 0; i < nations.length; i++){
+//   console.log(`
+//   nationality: ${nations[i].nationality}
+//   language: ${nations[i].language}
+//   capital: ${nations[i].capital}
+//   national spport: ${nations[i].national_sport}
+//   flag: ${nations[i].flag}
+//   `)
+ 
+// }
 
 //? 8a. Extract the following from the computer object
 
@@ -218,11 +259,15 @@ let computer = {
     os: 'Windows 7',
     stack: 'macOS, Mojave (10.14)'
 }
+// console.log(`A ${computer.platform} ${computer.type} running ${computer.os}`)
 
 //? 8b. Loop through the  computers array of objects and the same information as in part 8a for each computer in the array 
 
 let computers = data.computers;
-
+// for (let i = 0; i < computers.length; i++){
+//   console.log(`A ${computers[i].platform} ${computers[i].type} running ${computers[i].os}
+//   `)
+// }
 
 //? 9a. Extract the following from the commerce object
 
@@ -249,10 +294,14 @@ let commerce = {
     price_string: '8.67',
     promo_code: 'PremiumDiscount379839'
 }
-
+// console.log(`Blowout sale in the ${commerce.department} Department! Get ${commerce.material}, ${commerce.color} ${commerce.product_name} for only $ ${commerce.price}! User promo code: ${commerce.promo_code} (while supplies last).`)
 //? 9b. Loop through the  commerceData array of objects and the same information as in part 9a for each commerce in the array 
 
 let commerceData = data.commerce;
+// for (let i = 0; i < commerceData.length; i++){
+// console.log(`Blowout sale in the ${commerceData[i].department} Department! Get ${commerceData[i].material}, ${commerceData[i].color} ${commerceData[i].product_name} for only $${commerceData[i].price}! Use promo code: ${commerceData[i].promo_code} (while supplies last) 
+// `)}
+
 
 
 //? 10a. Extract the following from the company object
@@ -289,11 +338,20 @@ let company = {
     latitude: -73.18201842261946,
     longitude: 159.47558427151534
 }
+// console.log(`
+// ${company.business_name} --- ${company.catch_phrase}
+// ${company.full_address}
+// ${company.phone_number}`)
 
 //? 10b. Loop through the  companies array of objects and the same information as in part 10a for each comany in the array 
 
 let companies = data.companies;
-
+// for (let i = 0; i < companies.length; i++){
+//   console.log(`
+//   ${companies[i].business_name} --- ${companies[i].catch_phrase}
+//   ${companies[i].full_address}
+//   ${companies[i].phone_number}`)
+// }
 
 //? 11. Extract the following from the address object 
 
@@ -334,11 +392,18 @@ let address = {
     longitude: 14.039491768753294,
     full_address: 'Apt. 112 80931 Briana Green, South Joelfurt, NE 13161'
 }
+// console.log(`
+// ${address.street_address}
+// ${address.city} ${address.state_abbr}, ${address.zip_code}`)
 
 //? 11b. Loop through the  addresses array of objects and the same information as in part 11a for each dessert in the array 
 
-let addresses = data.addresses;
-
+// let addresses = data.addresses;
+// for (let i = 0; i < addresses.length; i++){
+//   console.log(`
+//   ${addresses[i].street_address}
+//   ${addresses[i].city} ${addresses[i].state_abbr}, ${addresses[i].zip_code}`)
+// }
 //? 12a. Extract the following from the restaurant object 
 
 
@@ -398,10 +463,48 @@ let restaurant = {
       sunday: { opens_at: '7:55 AM', closes_at: '4:13 PM', is_closed: false }
     }
 }
+// console.log(`
+// ${restaurant.type}
+// ${restaurant.name}
+// ${restaurant.address}
+// ${restaurant.phone_number}
 
+// ${restaurant.description}
+
+// ${restaurant.review}
+
+// Monday: ${restaurant.hours.monday.opens_at} - ${restaurant.hours.monday.closes_at}
+// Tuesday: ${restaurant.hours.tuesday.opens_at} - ${restaurant.hours.tuesday.closes_at}
+// Wednesday: ${restaurant.hours.wednesday.opens_at} - ${restaurant.hours.wednesday.closes_at}
+// Thursday: ${restaurant.hours.thursday.opens_at} - ${restaurant.hours.thursday.closes_at}
+// Friday: ${restaurant.hours.friday.opens_at} - ${restaurant.hours.friday.closes_at}
+// Saturday: ${restaurant.hours.saturday.opens_at} - ${restaurant.hours.saturday.closes_at}
+// Sunday: ${restaurant.hours.sunday.opens_at} - ${restaurant.hours.sunday.closes_at}
+// `)
 //? 12b. Loop through the  restaurants array of objects and the same information as in part a for each restaurant in the array 
 
 let restaurants = data.restaurants;
+// for (let i = 0; i < restaurants.length; i++){
+//   console.log(`
+// ${restaurants[i].type}
+// ${restaurants[i].name}
+// ${restaurants[i].address}
+// ${restaurants[i].phone_number}
+
+// ${restaurants[i].description}
+
+// ${restaurants[i].review}
+
+// Monday: ${restaurants[i].hours.monday.opens_at} - ${restaurants[i].hours.monday.closes_at}
+// Tuesday: ${restaurants[i].hours.tuesday.opens_at} - ${restaurants[i].hours.tuesday.closes_at}
+// Wednesday: ${restaurants[i].hours.wednesday.opens_at} - ${restaurants[i].hours.wednesday.closes_at}
+// Thursday: ${restaurants[i].hours.thursday.opens_at} - ${restaurants[i].hours.thursday.closes_at}
+// Friday: ${restaurants[i].hours.friday.opens_at} - ${restaurants[i].hours.friday.closes_at}
+// Saturday: ${restaurants[i].hours.saturday.opens_at} - ${restaurants[i].hours.saturday.closes_at}
+// Sunday: ${restaurants[i].hours.sunday.opens_at} - ${restaurants[i].hours.sunday.closes_at}
+// `)
+
+// }
 
 //todo extra: sort by restruant type i.e. Mexician
 
@@ -458,15 +561,8 @@ let vehicleData = data.vehicles;
 
 //? 14a. Extract the following from the loremIpsum object 
 
-//* 
-//* 
-//* 
-//* 
 
-// format the information as follows: 
-// flavor variety with topping
 //* i.e.  
-
 //* 'Omnis modi expedita. Ullam quam dolorem. Sint eos iste. Voluptatem ut est. Nisi impedit nostrum. Iusto similique facere. Possimus dolores quia. Sit quibusdam ducimus. Laudantium explicabo ex.'
 //* 1. Dolorem libero nemo?,
 //* 2. Unde quidem dicta?,
@@ -508,12 +604,38 @@ let loremIpsum = {
       'Velit sit dolores?'
     ]
 }
-
+// console.log(`
+// ${loremIpsum.paragraphs[0]} ${loremIpsum.paragraphs[1]} ${loremIpsum.paragraphs[2]}
+// 1. ${loremIpsum.questions[0]},
+// 2. ${loremIpsum.questions[1]},
+// 3. ${loremIpsum.questions[2]},
+// 4. ${loremIpsum.questions[3]},
+// 5. ${loremIpsum.questions[4]},
+// 6. ${loremIpsum.questions[5]},
+// 7. ${loremIpsum.questions[6]},
+// 8. ${loremIpsum.questions[7]},
+// 9. ${loremIpsum.questions[8]},
+// 10. ${loremIpsum.questions[9]}
+// `)
 //? 14b. Loop through the  dessertData array of objects and the same information as in part a for each dessert in the array 
 
 let loremIpsumData = data.loremIpsum
-
-
+// for (let i = 0; i < loremIpsumData.length; i++){
+// console.log(`
+// id: ${loremIpsumData[i].id}
+// ${loremIpsumData[i].paragraphs[0]} ${loremIpsumData[i].paragraphs[1]} ${loremIpsumData[i].paragraphs[2]}
+// 1. ${loremIpsumData[i].questions[0]},
+// 2. ${loremIpsumData[i].questions[1]},
+// 3. ${loremIpsumData[i].questions[2]},
+// 4. ${loremIpsumData[i].questions[3]},
+// 5. ${loremIpsumData[i].questions[4]},
+// 6. ${loremIpsumData[i].questions[5]},
+// 7. ${loremIpsumData[i].questions[6]},
+// 8. ${loremIpsumData[i].questions[7]},
+// 9. ${loremIpsumData[i].questions[8]},
+// 10. ${loremIpsumData[i].questions[9]}
+// `)
+// }
 //? 15a. Extract the following from the user object 
 
 //* 
@@ -567,10 +689,32 @@ let user = {
       term: 'Monthly'
     }
 }
-
+// console.log(`
+// ${user.employment.title}
+// ${user.first_name} ${user.last_name}
+// ${user.address.street_address}
+// ${user.address.city} ${user.address.state} ${user.address.zip_code}
+// ${user.phone_number}
+// email: ${user.email}
+// username: ${user.username}
+// password: ${user.password}
+// subscription plan: ${user.subscription.plan}
+// `)
 //? 15b. Loop through the  dessertData array of objects and the same information as in part a for each dessert in the array 
 
 let userData = data.users;
+// for(let i = 0; i < userData.length; i++){
+//   console.log(`
+// ${userData[i].employment.title}
+// ${userData[i].first_name} ${user.last_name}
+// ${userData[i].address.street_address}
+// ${userData[i].address.city} ${userData[i].address.state} ${userData[i].address.zip_code}
+// ${userData[i].phone_number}
+// email: ${userData[i].email}
+// username: ${userData[i].username}
+// password: ${userData[i].password}
+// subscription plan: ${userData[i].subscription.plan}`)
+// }
 
 
 //?  16a. Extract the following from the hipsterInfo object
@@ -612,7 +756,32 @@ let hipsterInfo = {
       'Kogi green juice church-key selfies five dollar toast. Kinfolk tattooed food truck lumbersexual farm-to-table sustainable pop-up hammock. Mixtape narwhal pinterest wolf loko viral shoreditch.'
     ]
 }
+console.log(`
+${hipsterInfo.paragraphs}
+words:
+1. ${hipsterInfo.words[0]}
+2. ${hipsterInfo.words[1]}
+3. ${hipsterInfo.words[2]}
 
+sentences
+1. ${hipsterInfo.sentences[0]}
+2. ${hipsterInfo.sentences[1]}
+3. ${hipsterInfo.sentences[2]}
+`)
 //? 16b. Loop through the  dessertData array of objects and the same information as in part a for each dessert in the array 
 
 let hipsterData = data.hipsters;
+for(let i = 0; i < hipsterData.length; i++)
+console.log(`
+${hipsterData[i].paragraphs}
+words:
+1. ${hipsterData[i].words[0]}
+2. ${hipsterData[i].words[1]}
+3. ${hipsterData[i].words[2]}
+
+sentences
+1. ${hipsterData[i].sentences[0]}
+2. ${hipsterData[i].sentences[1]}
+3. ${hipsterData[i].sentences[2]}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`)
+
