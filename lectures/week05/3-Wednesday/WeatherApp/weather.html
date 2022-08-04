@@ -5,17 +5,59 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel = "stylesheet" src="style.css">
+  <style>
+    body{
+      background-color: skyblue;
+    }
+    
+    h1{
+      text-align: center;
+      font-size: 50px;
+      color:navy;
+
+    }
+
+    .weather{ 
+      display: flex; 
+      justify-content: center; 
+      text-align: center;}
+
+      .text{
+        justify-content: center;
+      }
+
+  h2{
+    text-align: center;
+
+  }
+
+  .input{
+    text-align:center;
+  }
+
+  .button{
+    background-color: cornflowerblue;
+    font-style: normal;
+  }
+
+  .placeholder:{
+    font-style: ita;
+  }
+  </style>
 </head>
 <body>
-<h1>Weather App</h1>
-<input type = "text" placeholder="Enter a city">
-<button type = "submit">SUBMIT</button>
+<h1>Today's Weather is...</h1>
 
-<div></div>
+<div class = "input">
+<input class = "text" type = "text" placeholder="Enter a city">
+<button class= "button" type = "submit">SUBMIT</button>
+</div>
 
 
+<div class="weather">
 <script>
- 
+
 let input = document.querySelector('input')
 let button = document.querySelector('button')
 button.addEventListener("click", e=>{
@@ -39,12 +81,13 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${nameSplit}&appid=dca2
 
     let div = document.querySelector('div')
 
-    div.innerHTML = `<h1>Current Temp ${degF} ℉</h1>`
+    div.innerHTML = `<h2>The temperature in ${city} is ${degF} ℉</h2>`
 
   })
 }) 
-</script>
 
+</script>
+</div>
 </body>
 </html>
 <!-- // fetch // .then(result=>result.json()) // .then(data => { // console.log(data)

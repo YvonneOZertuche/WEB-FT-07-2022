@@ -1,0 +1,17 @@
+h1{
+  text-align: center;
+}
+
+.weather{
+  display: flex;
+  justify-content: center;
+}
+  
+body{
+  /* background-image: url('image.png'); */
+  background-color: rgb(72, 184, 229);
+  color:rgb(36, 36, 225);
+  font-size: 50px;
+  
+  
+}
