@@ -2,10 +2,18 @@
 
 let myName = require('./ourModules/stringMod.js') 
 let mathFunctions = require('./ourModules/sum')
+const log = require('./ourModules/stack');
 
-let arr = [1,2,3,4]
+const Stack = require('./ourModules/stack');
 
-let result1 = mathFunctions.sum(arr)
-let result2 = mathFunctions.product(arr)
+let stack = new Stack()
 
-console.log(result1, result2)
+// let arr = new Array(1, 2, 3, 4)
+
+
+// let arr = [1,2,3,4]
+
+// let result1 = mathFunctions.sum(arr)
+// let result2 = mathFunctions.product(arr)
+
+// console.log(result1, result2)
