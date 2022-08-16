@@ -1,3 +1,35 @@
-changeInner = () => {
-  document.getElementById("Submit") = "Hello World"
-}
+<!-- <div id="submit">Click Me</div>
+
+Write a function changes the value of this div to say "Hello World" -->
+
+
+<!-- changeInner = () => {
+  document.getElementById("Submit").innerHTML = "Hello World"
+} -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>The Element Object</h1>
+    <h2>The innerHTML Property</h2>
+
+    <p id="demo" onclick="myFunction()">
+      Click me to change my HTML content (innerHTML).
+    </p>
+
+  <div id="submit">Click Me</div>
+
+    <script>
+      function myFunction () {
+        document.getElementById('demo').innerHTML = 'I have changed!'
+      }
+      myFunction()
+
+      changeInner = () => {
+        document.getElementById("Submit").innerHTML = "Hello World"
+} 
+
+ changeInner()
+    </script>
+  </body>
+</html>
