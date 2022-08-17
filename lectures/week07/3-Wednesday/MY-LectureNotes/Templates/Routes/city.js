@@ -1,8 +1,6 @@
 const express = require('express')
 const router = express.Router()
 
-
-
 let cities = ['Atlanta', 'Houston', 'Seattle', 'Miami']
 
 let pictures = [
@@ -12,16 +10,30 @@ let pictures = [
   'https://www.swatchgroup.com/sites/default/files/watchmaking-wostep/schools/754-603-miami-skyline.jpg'
 ]
 
-router.get('/city/:id', (req, res) =>{
-
-  let id = req.params.id 
+router.get('/city', (req, res) =>{
 
   res.render('city',{
-      cities: cities[id],
-      pictures: pictures[id]
+      cities: cities,
+      pictures: pictures
   })
     
-
 })
+
+//localhost:3000/city/0
+//localhost:3000/city/1
+//localhost:3000/city/2
+//localhost:3000/city/3
+
+  router.get('/city/:id', (req, res) =>{
+
+    let id = req.params.id
+
+    res.render('city', {
+      cities: [cities[id]],
+      pictures: [pictures[id]]
+    })
+  })  
+
+
 
 module.exports = router
