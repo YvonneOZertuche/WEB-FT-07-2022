@@ -10,6 +10,7 @@ app.use(require('./routes/index'))
 app.use(require('./routes/aboutus'))
 app.use(require('./routes/faq'))
 
+app.use(require('./routes/city'))
 
 
 
