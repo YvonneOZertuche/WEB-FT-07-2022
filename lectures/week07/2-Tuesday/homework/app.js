@@ -48,23 +48,30 @@ app.get('/greet/:name', (req, res) => {
 })
 
 // 4. Query Parameters: Tell the year you were born
+// localhost:3000/year/?age=32
+ app.get('/year', (req, res) => {
+  let age = req.query.age
+  let year = 2022 - age
 
-birthYear = () => {
-  let age = 52
-  let year = new Date().getFullYear()
-  yearOfBirth = (year - age)
-  // console.log(year)
-  // console.log(age)
-  console.log(yearOfBirth)
-}
+  res.send(`You were born in ${year}`)
+ })
 
 
-app.get('/hello1/:name', (req, res) => {
+// birthYear = () => {
+//   let age = 52
+//   let year = new Date().getFullYear()
+//   yearOfBirth = (year - age)
+//   // console.log(year)
+//   // console.log(age)
+//   console.log(yearOfBirth)
+// }
 
-  //  name = req.params.name || 'world'
-   res.send(`Hello ${name}!`),
 
-})
+// app.get('/hello1/:name', (req, res) => {
+
+//   //  name = req.params.name || 'world'
+//    res.send(`Hello ${name}!`),
+
 // Adding to the same program, display the year you were born when you report your age in a query parameter. For example, when you go to the URL:
 
 // /year?age=32 it will display You were born in 1985.
@@ -72,4 +79,3 @@ app.get('/hello1/:name', (req, res) => {
 
 
 
-{/* <h1>`You were born in ${yearOfBirth}`</h1> */}
