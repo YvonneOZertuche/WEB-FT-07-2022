@@ -59,5 +59,71 @@
 -- (DEFAULT, 'JS Prototypes', 7);
 
 
-DELETE FROM articles;
-DELETE FROM author;
+-- DELETE FROM articles;
+-- DELETE FROM author;
+
+-- CREATE TABLE groups (
+--   id SERIAL PRIMARY KEY,
+--   name VARCHAR
+-- );
+
+-- CREATE TABLE member (
+--   id SERIAL PRIMARY KEY,
+--   name VARCHAR
+-- );
+
+-- CREATE TABLE membership (
+--   id SERIAL PRIMARY KEY,
+--   team_id INTEGER REFERENCES groups (id),
+--   member_id INTEGER REFERENCES member (id)
+-- );
+
+-- INSERT INTO groups VALUES
+-- (DEFAULT, 'Atlanta Javascript Meetup');
+-- (DEFAULT, 'PyLadies'),
+-- (DEFAULT, 'Girl Develop It'),
+-- (DEFAULT, 'Atlanta Web Design Group');
+
+-- INSERT INTO member VALUES
+-- (DEFAULT, 'Alfie'),
+-- (DEFAULT, 'Michael'),
+-- (DEFAULT, 'Tarek'),
+-- (DEFAULT, 'Kevin'),
+-- (DEFAULT, 'Glen'),
+-- (DEFAULT, 'David'),
+-- (DEFAULT, 'Ollie'),
+-- (DEFAULT, 'Chris'),
+-- (DEFAULT, 'Sabrina'),
+-- (DEFAULT, 'Garrett'),
+-- (DEFAULT, 'Jeroen'),
+-- (DEFAULT, 'Deron');
+
+-- INSERT INTO membership VALUES
+-- (DEFAULT, 4, 4),
+-- (DEFAULT, 1, 5),
+-- (DEFAULT, 1, 6),
+-- (DEFAULT, 1, 10),
+-- (DEFAULT, 2, 1),
+-- (DEFAULT, 2, 5),
+-- (DEFAULT, 2, 6),
+-- (DEFAULT, 2, 10),
+-- (DEFAULT, 3, 8),
+-- (DEFAULT, 3, 9),
+-- (DEFAULT, 3, 10),
+-- (DEFAULT, 3, 12),
+-- (DEFAULT, 4, 1),
+-- (DEFAULT, 4, 3),
+-- (DEFAULT, 4, 7),
+-- (DEFAULT, 4, 8);
+
+SELECT *
+FROM 
+  groups
+INNER JOIN
+  membership
+ON 
+  groups.id = group_id
+INNER JOIN
+  member 
+ON
+  member.id = member_id;    
