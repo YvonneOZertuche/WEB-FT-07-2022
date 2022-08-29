@@ -1,5 +1,5 @@
 const LocalStrategy = require('passport-local');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const db = require('../models');
 
 const init = (passport) => {
@@ -7,9 +7,9 @@ const init = (passport) => {
   //req => passport => sessionid req.isAuthenticated() => response
   passport.use(new LocalStrategy({usernameField: 'email'},async (email, password, done) => {
     try {
-
-      let records = await db.ussers.findAll({where: {email:email}})// [{}]
-
+      console.log(email, password)
+      let records = await db.users.findAll({where: {email:email}})// [{}]
+  console.log('checkpoint 1')
       if(records){
 
         let record = records[0]
@@ -19,6 +19,7 @@ const init = (passport) => {
 
           if (match){
             console.log('passwords matched')
+            //req.session
             return done(null, record)
           }
           else{
