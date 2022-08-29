@@ -55,5 +55,5 @@
 
 -- SELECT AVG(stars) FROM restaurant GROUP BY category;
 
--- ALTER TABLE restaurant
--- ALTER COLUMN stars TYPE integer USING stars::integer;
+ALTER TABLE restaurant
+ALTER COLUMN stars TYPE integer USING stars::integer;
