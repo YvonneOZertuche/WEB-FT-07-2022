@@ -15,14 +15,15 @@ module.exports = {
         type: Sequelize.STRING
       },
       userID: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+          preferences: {
+            model: 'blogs',
+            key: id
+        },
+
       },
       is_published: {
-        type: Sequelize.BOOLEAN,
-        // references: {
-        //   model: 'blogs',
-        //   key: false
-        // },
+        type: Sequelize.BOOLEAN
       },
       createdAt: {
         allowNull: false,
