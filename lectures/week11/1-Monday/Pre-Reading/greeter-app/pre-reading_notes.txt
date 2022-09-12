@@ -1,0 +1,39 @@
+Render()
+* render() method tells React what to draw to the page
+* React will call render() automatically when its ready to display components
+* There is a pair of () around the JSK with the opening ( on the same line as return
+* Developers do this so they can format JSX with line breaks and indentation
+
+A class component MUST have two things:
+  1. extend.React.component
+  2. have a render() method that returns JSX
+  
+Using a custom component involves two steps:
+  1. importing the class component (in this example Greeter)
+  2. Writing a JSX tag (Greeter JSX tag)  
+  
+
+** When importing a component, specify the relative path to the JavaScript file  
+
+** A JSX tag is self-closing
+
+PASSING PROPS 
+  - To provide information to a component, you add props (which look identical to HTML attributes)
+  - Inside a method use 'this' to refer to a specific instance of the component className
+  - Props are always available under 'this.props'
+  - You can treat props like variables - you can call the whatever you like
+  - {} in JSX is like ${} in a Template literal
+  - You CANNOT put if-else or loops inside {} in JSX
+  - Props are not required
+
+COMMENTS
+* To add a comment to JSX: {/* */}
+
+Array.map()
+
+The .map() method does the following:
+1. Expects to receive a function argument
+2. Iterates over the elements of the Array
+3. Passes each element to the function argument
+4. Stores the returned value in a new Array
+5. Returns the new Array
