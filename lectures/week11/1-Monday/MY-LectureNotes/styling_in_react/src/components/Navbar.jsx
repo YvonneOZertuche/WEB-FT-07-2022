@@ -1,8 +1,10 @@
 import Container from 'react-bootstrap/Container'
 import Navbar from 'react-bootstrap/Navbar'
+import React from 'react'
 
-function BrandExample ({brandLink, brandText, brandDescription}) {
+function BrandExample ({ brandLink, brandText, brandDescription }) {
   return (
+
     <>
       <Navbar bg='light'>
         <Container>
@@ -49,3 +51,4 @@ function BrandExample ({brandLink, brandText, brandDescription}) {
 }
 
 export default BrandExample
+
