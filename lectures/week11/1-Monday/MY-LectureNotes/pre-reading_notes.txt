@@ -37,3 +37,7 @@ The .map() method does the following:
 3. Passes each element to the function argument
 4. Stores the returned value in a new Array
 5. Returns the new Array
+
+
+SNIPPETS
+* rfce - shortcut to create component skeleton
