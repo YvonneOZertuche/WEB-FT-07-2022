@@ -1,4 +1,4 @@
-[
+let bookData =[
     {
     "author": "Chinua Achebe",
     "country": "Nigeria",
@@ -1000,3 +1000,5 @@
     "year": 1951
     }
     ]
+
+    export default bookData
