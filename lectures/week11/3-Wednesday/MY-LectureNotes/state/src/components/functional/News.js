@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 
+//closure
 function News() {
 
   console.log("I've been rendered")
@@ -11,6 +12,7 @@ function News() {
   useEffect(()=>{
     
     const newsData = async () => {
+
       let response = await fetch('https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=0cf790498275413a9247f8b94b3843fd') 
       let data = await response.json()
 
@@ -32,7 +34,7 @@ function News() {
       return articleObj.title.toLowerCase().includes(filteredText.toLowerCase())
     })
 
-    setFilteredArticles(filteredArticles)
+    setFilteredArr(filteredArticles)
 
   }
 
