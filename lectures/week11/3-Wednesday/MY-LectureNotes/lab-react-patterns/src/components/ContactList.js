@@ -9,7 +9,7 @@ const ContactList = () => {
     <>
       {contactData.map(contactObj =>{
         return <Contact key={contactObj.name} contactProp={contactObj}
-      })}
+      
     </>
   )
 }
