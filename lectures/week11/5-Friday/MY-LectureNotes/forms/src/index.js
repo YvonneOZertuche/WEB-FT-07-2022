@@ -19,6 +19,7 @@ root.render(
             <Route path="/" element={<App />}/>
             <Route path="/forms" element={<Forms />}/>
             <Route path="/about" element={<AboutUs />}/>
+            <Route path="/about/:aboutID " element={<AboutUs />}/>
         </Switch>
     </BaseLayout>
  </Router>

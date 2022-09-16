@@ -2,9 +2,9 @@ import React, {useState} from 'react'
 
 const Forms = () => {
 
-  const [textValue, setTextValue] = useState('goodbye')
-  const [isValid, setIsValid] = useState(false)
-  const [selectValue, setSelectValue] = useState("Seattle")
+  const [textValue, setTextValue] = useState('')
+  // const [isValid, setIsValid] = useState(false)
+  const [selectValue, setSelectValue] = useState("")
 
   const handleSubmit = (e) => {
     
@@ -14,7 +14,7 @@ const Forms = () => {
 
     let dataObj = {
       textValue,
-      isValid,
+     
       selectValue
     }
 
@@ -26,16 +26,18 @@ const Forms = () => {
   return (
     <>
 
+    <h1> Forms</h1>
+    
     <h2>{textValue}</h2>
 
-    <h2>{isValid ? "true" : "false"}</h2>
+    {/* <h2>{isValid ? "true" : "false"}</h2> */}
 
     <h2>{selectValue}</h2>
 
     <form onSubmit={handleSubmit}>
       <input type='text' value={textValue} onChange={e => setTextValue(e.target.value)} />
 
-      <input type='checkbox' value={isValid} onChange={e => setIsValid(e.target.checked)} />
+      {/* <input type='checkbox' value={isValid} onChange={e => setIsValid(e.target.checked)} /> */}
 
       <select value={selectValue} onChange={e => setSelectValue(e.target.value)} >
 
@@ -49,7 +51,7 @@ const Forms = () => {
 
       <input type = "submit" />
 
-    </form>
+    </form>       
 
     </>
   )

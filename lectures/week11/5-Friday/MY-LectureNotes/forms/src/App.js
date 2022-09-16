@@ -1,12 +1,19 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Forms from './components/Forms'
 
-function App() {
+
+const App = () => {
+  
+  useEffect(() => {
+  document.title = 'Home'
+})
+
   return (
     <>
     
-    <Forms />
+    {/* <Forms /> */}
 
+    <h1>Home Page</h1>
     </>
 
   )  
