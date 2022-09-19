@@ -11,9 +11,9 @@ const App = () => {
   return (
     <>
     
-    {/* <Forms /> */}
+    <Forms />
 
-    <h1>Home Page</h1>
+    {/* <h1>Home Page</h1> */}
     </>
 
   )  
