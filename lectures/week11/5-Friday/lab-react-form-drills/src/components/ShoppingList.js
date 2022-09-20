@@ -28,7 +28,7 @@ const ShoppingList = () => {
     document.title = 'Shopping List'
   })
 
-
+  //function - Adds items to the list
   const handleAddButtonClick = () => {
     const newItem = {
       itemName: inputValue,
@@ -40,21 +40,17 @@ const ShoppingList = () => {
     setInputValue('')
   }
 
-
-
       return (
         <>
           <h1>Shopping List</h1>
 
           <form onSubmit={handleSubmit}>
 
-            {<h6>Add New Item:</h6>} 
+            <h6>Add New Item:</h6>
 
             <input type='text' value={inputValue} onChange={e => setInputValue(e.target.value)}/>
-            
           
             <input type = "Submit" onClick={() => handleAddButtonClick()}/>
-
        
             <br />
             <br />
