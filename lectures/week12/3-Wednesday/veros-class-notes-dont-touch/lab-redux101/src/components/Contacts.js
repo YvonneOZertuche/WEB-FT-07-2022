@@ -1,23 +1,21 @@
 import React from 'react'
 import AddContact from './AddContact'
-import {useSelector, useDispatch} from 'react-redux'
-import {removeContact} from '../actions/contacts'
+import {useSelector} from 'react-redux'
+import ContactItem from './ContactItem'
 
 const Contacts = () => {
 
   const contactList = useSelector(state => state.contacts) 
-  const dispatch = useDispatch()// store.dispatch(actionCreator)
-
+  
   return (
     <>
       <h1>Contacts and Redux</h1>
-
 
       <AddContact />
 
       <ul>
         {contactList.map(contactObj =>{
-           
+           return <ContactItem contactObj={contactObj} />
         })}
       </ul>
       
