@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { removeContact } from '../actions/contacts'
 
 
-const ContactItem = () => {
+const ContactItem = ({contactObj}) => {
 
   const dispatch = useDispatch()
 
