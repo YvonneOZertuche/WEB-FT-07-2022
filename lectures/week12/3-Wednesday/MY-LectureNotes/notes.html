@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.min.js"></script>
+
+
+<!-- Every 'action' needs a type property
+ An action is an object
+ A function that wraps an action is an action creator
+ A reducer is a function that gets passed over to the Store -->
+<script>
+ const addContact = (id, firstName, city) => {
+    return {
+      type: 'ADD_CONTACT',
+      data: {
+        id:id,
+        firstName: firstName,
+        city: city
+      }
+    }
+ }
+      
+    
+
+    const removeContact = (id) => {
+      return{
+        type: "REMOVE_CONTACT",
+        id: id
+      }
+      
+    }
+    const reducer = (state, action) => {
+      if(state === undefined){
+          state = {
+            contacts: []
+          }
+        }
+        switch(action.type){
+          case "ADD_CONTACT" :
+            return{
+              ...state,
+              contacts: state.contacts.concat(action.data)
+            }
+          case "REMOVE_CONTACT": 
+            return {
+              ...state,
+              contacts: state.contacts.filter(contact => {
+                return contact.id == action.id !== action.id
+              })
+            }
+
+            default:  
+              return state
+        }
+      }
+    
+    const store = Redux.createStore(reducer) //reducer
+
+    const showState = () => {
+      console.log(store.getState())
+    }
+
+    store.subscribe(showState)
+
+    store.dispatch(addContact(1, 'Yvonne', 'New Braunfels'))
+
+    store.dispatch(removeContact(2))
+
+   </script>
+    
+  </body>
+    </html> 
