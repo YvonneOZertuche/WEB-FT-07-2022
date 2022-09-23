@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {addStudents} from '../actions/students'
+import DisplayStudents from './DisplayStudents'
 
 
 const AddStudents = () => {
@@ -16,14 +17,17 @@ const AddStudents = () => {
     
   return (
     <>
-      Add Students 
+    
       <br />
 
-      <h3>Current Student Count: {count}</h3>
+      <DisplayStudents />
+
 
       {(!clickedAddStudents || count === 0) ? 
       <button onClick={() => dispatch(addStudents())}>Add Students</button> :
       <p style = {{color: "green"}}>Student has been added!</p>}
+
+     
       
 
     </>

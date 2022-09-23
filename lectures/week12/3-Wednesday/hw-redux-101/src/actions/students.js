@@ -10,7 +10,7 @@ const addStudents = ()=> {
 }
  
 const addNewStudent = (id, fName, city) => {
-  console.log(id,fName,city)
+  // console.log(id,fName,city)
   return {
     type: "ADD_NEW_STUDENT",
     data: {
@@ -64,8 +64,17 @@ const searchStudent = (name) => {
     name
   }
 }
+export {
+  addStudents,
+  addNewStudent,
+  deleteStudentById,
+  deleteStudentByName,
+  sortStudentsAlpha,
+  sortStudentsCity,
+  addStudentInOrder,
+  searchStudent
+}
 
-export {addStudents, addNewStudent, deleteStudentById, deleteStudentByName, sortStudentsAlpha, sortStudentsCity, addStudentInOrder, searchStudent}
 
 
 

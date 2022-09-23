@@ -11,6 +11,9 @@ const AddNewStudent = () => {
   const dispatch = useDispatch()
   const [fName, setfName] = useState('')
   const [city, setCity] = useState('')
+  const count = useSelector(state => state.count )
+  const clickedAddStudents = useSelector(state => state.clickedAddStudents)
+
   
 
   const handleSubmit = (e) => {
@@ -38,6 +41,15 @@ const AddNewStudent = () => {
         <input type="submit"/>
 
       </form>
+
+      {
+  !clickedAddStudents || count === 0 ? (
+    <button onClick={() => dispatch(addNewStudent())}>Add Students</button>
+  ) : (
+    <p style={{ color: 'green' }}>Student has been added!</p>
+  )
+}
+
     
       {/* <ul>
   {studentList.map(studentObj => {
