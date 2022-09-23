@@ -1,4 +1,4 @@
-import React from 'react'
+import '../actions/actionTypes'
 
 const authorsReducer = (state, action) => {
   if(state === undefined){

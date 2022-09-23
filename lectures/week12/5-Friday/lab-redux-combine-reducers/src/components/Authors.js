@@ -18,7 +18,7 @@ class Authors extends Component {
 };
 
 const mapStateToProps = state => {
-  return { authors: state.authors }
+  return { authors: state.author.authors }
 }
 
 export default connect(mapStateToProps)(Authors);
