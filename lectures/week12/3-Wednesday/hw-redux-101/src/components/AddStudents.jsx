@@ -1,14 +1,14 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import {addStudents} from '../actions/students'
 
-
-
-// import students from '../actions/students'
 
 const AddStudents = () => {
 
-    // const studentList = useSelector(state => state.students)
-    const count = useSelector(state => state.count)
+   const dispatch = useDispatch()
+   const count = useSelector(state => state.count)
+   const clickedAddStudents = useSelector(state => state.clickedAddStudents)
+
 
     // add the list of students from data/students to the global state
     // show the current student count
@@ -16,19 +16,16 @@ const AddStudents = () => {
     
   return (
     <>
-       
-        {/* <ul>
-          {studentList.map(studentsObj  =>{
+      Add Students 
+      <br />
 
-          })}
-        </ul> */}
+      <h3>Current Student Count: {count}</h3>
 
-          
-          <h3>Current Student Count: {count}</h3> 
-       
+      {(!clickedAddStudents || count === 0) ? 
+      <button onClick={() => dispatch(addStudents())}>Add Students</button> :
+      <p style = {{color: "green"}}>Student has been added!</p>}
+      
 
-     
-      {/* <button>Add Students</button> */}
     </>
   )
 }
