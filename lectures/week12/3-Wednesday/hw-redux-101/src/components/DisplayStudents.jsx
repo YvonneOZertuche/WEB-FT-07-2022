@@ -17,9 +17,18 @@ const DisplayStudents = () => {
         <>
         
           <h1>Students</h1>
-          <AddNewStudent />
+          {/* <AddNewStudent /> */}
 
-      
+           <ul>
+            {studentList.map(studentObj => {
+              return (
+                <li key={studentObj.id}>{studentObj.fName}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {studentObj.city}
+                &nbsp;&nbsp;
+                </li>
+              )
+            })}
+          </ul> 
+
         
          
 

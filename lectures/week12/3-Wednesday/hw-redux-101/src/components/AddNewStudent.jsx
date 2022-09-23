@@ -35,7 +35,7 @@ const AddNewStudent = () => {
 
       </form>
     
-      <ul>
+      {/* <ul>
   {studentList.map(studentObj => {
     return (
       <li key={studentObj.id}>
@@ -44,7 +44,7 @@ const AddNewStudent = () => {
       </li>
     )
   })}
-</ul>
+</ul> */}
 
   <DisplayStudents />
     </>
