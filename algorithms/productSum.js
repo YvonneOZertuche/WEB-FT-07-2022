@@ -11,9 +11,33 @@ Therefore, the product sum of [x, y] is x + y; the product sum of [x, [y, z]] is
 Sample input
 
 array = [5, 2, [7, -1], 3, [6, [-13, 8], 4]]
+                           |
+
 
 Sample Output
 
 12 // calculated as: 5 + 2 + 2 * (7 - 1) + 3 + 2 * (6 + 3 * (-13 + 8) + 4)
 
  */
+
+const productSum = (arr, depth=1) => {
+    
+    return arr.reducer( (acc, val)=>{
+        if(Array.isArray(val)){
+            return acc + (depth + 1) * (productSum(val, depth + 1))
+        }
+        else{
+            return acc + val
+        }
+    }, 0)
+}
+
+//[-13, 8]
+//-5
+
+// [6, [-13, 8], 4]
+//  6 +  (2 + 1) * -5) ==  6 -15 = -9
+
+// 5 + 2 + (1 + 1) * (6)  + 3  + (1 +1)* -9)
+// 
+
