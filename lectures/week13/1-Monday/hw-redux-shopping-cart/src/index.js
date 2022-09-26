@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage' // defaults to localStorage for web
 import { PersistGate } from 'redux-persist/integration/react'
+import './index.css'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import App from './App'
