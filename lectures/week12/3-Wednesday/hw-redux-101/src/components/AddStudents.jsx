@@ -1,12 +1,13 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {addStudents} from '../actions/students'
-import DisplayStudents from './DisplayStudents'
+
 
 
 const AddStudents = () => {
 
    const dispatch = useDispatch()
+  //  const students = useSelector(state => state.students)
    const count = useSelector(state => state.count)
    const clickedAddStudents = useSelector(state => state.clickedAddStudents)
 
@@ -17,18 +18,15 @@ const AddStudents = () => {
     
   return (
     <>
-    
-      <br />
-
-      <DisplayStudents />
-
-
-      {(!clickedAddStudents || count === 0) ? 
-      <button onClick={() => dispatch(addStudents())}>Add Students</button> :
-      <p style = {{color: "green"}}>Student has been added!</p>}
-
      
-      
+
+      <h2>Current Student Count: {count}</h2>
+
+    
+
+      {(!clickedAddStudents || count === 0)
+      ? <button onClick = {() => dispatch(addStudents())}>Add Students</button>
+      : <p style= {{color: "green"}}>Students have been added!</p>}
 
     </>
   )

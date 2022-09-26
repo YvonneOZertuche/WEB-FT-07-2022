@@ -1,27 +1,26 @@
 import React, { useState } from 'react'
+import {useDispatch, useSelector} from 'react-redux'
 import { v4 as uuidv4 } from 'uuid'
-import { useDispatch } from 'react-redux'
-import {addNewStudent} from '../actions/students'
-
-
+import {addStudents} from '../actions/students'
+import AddStudents from './AddStudents'
 
 
 const AddNewStudent = () => {
 
   const dispatch = useDispatch()
-  const [fName, setfName] = useState('')
+  const [fName, setFName] = useState('')
   const [city, setCity] = useState('')
-  const count = useSelector(state => state.count )
+  const count = useSelector(state => state.count)
   const clickedAddStudents = useSelector(state => state.clickedAddStudents)
 
-  
 
-  const handleSubmit = (e) => {
+
+  const handleStudentSubmit = (e) => {
     e.preventDefault()
 
-     dispatch(addNewStudent(uuidv4(),fName, city))
+     dispatch(addStudents(uuidv4(),fName, city))
 
-     setfName('')
+     setFName('')
      setCity('')
 
 
@@ -29,25 +28,31 @@ const AddNewStudent = () => {
 
   return (
     <>
+      
+
      
-      <form onSubmit={e=>handleSubmit(e)}>
+      {/* <form onSubmit={e=>handleSubmit(e)}> */}
+      <form onSubmit={handleStudentSubmit}>
 
-        <input type="text" placeholder="Student Name" value={fName} onChange={(e)=> setfName(e.target.value)}/>
+        <input type="text" placeholder="Student Name" value={fName} onChange={(e) => setFName(e.target.value)}/>
 
-        <input type="text" placeholder="City" value={city} onChange={(e)=>setCity(e.target.value)}/>
+        <input type="text" placeholder="City" value={city} onChange={(e) => setCity(e.target.value)}/>
 
         <br/><br/>
 
         <input type="submit"/>
 
+        <AddStudents />
+
+
       </form>
 
+     
+
+
       {
-  !clickedAddStudents || count === 0 ? (
-    <button onClick={() => dispatch(addNewStudent())}>Add Students</button>
-  ) : (
-    <p style={{ color: 'green' }}>Student has been added!</p>
-  )
+
+  
 }
 
     

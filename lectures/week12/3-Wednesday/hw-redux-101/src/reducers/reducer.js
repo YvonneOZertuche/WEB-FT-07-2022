@@ -1,9 +1,11 @@
 //Need to ask if count=0 and students is an empty array, how do I update, once data was imported.
+import students from '../data/students'
 
 const reducer = (state, action) => {
+
   if (state === undefined) {
     state = {
-      students: [],
+      students: [students],
       count: 0,
       clickedAddStudents: false,
       searchResult: {},
@@ -19,7 +21,7 @@ const reducer = (state, action) => {
         count: state.count + action.data.length,
         clickedAddStudents: action.add
       }
-    case 'ADD_NEW_STUDENT':
+    case 'ADD_STUDENT':
       return {
         ...state,
         students: state.students.concat(action.data),

@@ -8,7 +8,7 @@ import { addStudentInOrder, sortStudentsAlpha } from '../actions/students'
 const AddItemInOrder = () => {
 
   const dispatch = useDispatch()
-  const [fName, setfName] = useState("")
+  const [fName, setFName] = useState("")
   const [city, setCity] = useState("")
 
     const handleStudentSubmit = (e) => {
@@ -17,7 +17,7 @@ const AddItemInOrder = () => {
       dispatch(addStudentInOrder(uuidv4(), fName, city));
       dispatch(sortStudentsAlpha());
   
-      setfName("");
+      setFName("");
       setCity("");
 
   }
@@ -29,20 +29,20 @@ const AddItemInOrder = () => {
         type='text'
         placeholder='First Name'
         value={fName}
-        onChange={e => setfName(e.target.value)}
+        onChange={(e) => setFName(e.target.value)}
       />
 
       <input
         type={'text'}
         placeholder='City'
         value={city}
-        onChange={e => setCity(e.target.value)}
+        onChange={(e) => setCity(e.target.value)}
       />
 
       <input type='submit' />
     </form>
 
-  </>;
+  </>
 }
 
 export default AddItemInOrder

@@ -1,18 +1,22 @@
 import students from "../data/students"
 
-const addStudents = ()=> {
+const addStudents = (id, fName, city)=> {
 
   return {
     type: "ADD_STUDENTS",
-    data: students,
-    add: true
+    data: {
+      students,
+      id,
+      fName,
+      city
+    }
   }
 }
  
-const addNewStudent = (id, fName, city) => {
+const addStudent = (id, fName, city) => {
   // console.log(id,fName,city)
   return {
-    type: "ADD_NEW_STUDENT",
+    type: "ADD_STUDENT",
     data: {
       id,
       fName,
@@ -21,7 +25,7 @@ const addNewStudent = (id, fName, city) => {
   }
 }
 
-const deleteStudentById = (id) => {
+const deleteStudentByID = (id) => {
   return {
     type: "DELETE_STUDENT_BY_ID",
     id
@@ -47,7 +51,7 @@ const sortStudentsCity = () => {
   }
 }
 
-const addStudentInOrder = () => {
+const addStudentInOrder = (id, fName, city) => {
   return{
     type:"ADD_STUDENT_IN_ORDER",
     data: {
@@ -66,8 +70,8 @@ const searchStudent = (name) => {
 }
 export {
   addStudents,
-  addNewStudent,
-  deleteStudentById,
+  addStudent,
+  deleteStudentByID,
   deleteStudentByName,
   sortStudentsAlpha,
   sortStudentsCity,

@@ -9,14 +9,15 @@ import DisplayStudents  from './DisplayStudents'
 const DeleteStudentByName = () => {
 
   const dispatch = useDispatch()
-  const [fName, setfName] = useState("")
+  const [fName, setFName] = useState("")
 
   const handleStudentSubmit = (e) => {
     e.preventDefault();
 
     dispatch(deleteStudentByName(fName));
-    setfName("");
+    setFName("");
   }
+
   return (
     <>
       <h1>Delete Student By Name</h1>
@@ -26,12 +27,16 @@ const DeleteStudentByName = () => {
           type='text'
           placeholder='Enter Student Name'
           value={fName}
-          onChange={e => setfName(e.target.value)}
+          onChange={(e) => setFName(e.target.value)}
         />
 
         <input type='submit' />
 
       </form>
+
+      <br></br>
+      <br></br>
+      <DisplayStudents />
 
     </>
   )
