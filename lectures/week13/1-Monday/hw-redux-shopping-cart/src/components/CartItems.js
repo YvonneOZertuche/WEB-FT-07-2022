@@ -50,9 +50,6 @@ const CartItems = () => {
                     
                   </div>
 
-
-
-
                 })
               }
 
