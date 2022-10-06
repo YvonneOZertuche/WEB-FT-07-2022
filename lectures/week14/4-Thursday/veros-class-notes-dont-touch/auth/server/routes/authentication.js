@@ -10,6 +10,9 @@ const passport = require('passport');
 //must initialize passport for it work
 router.use(passport.initialize())
 
+//impor all fo the passAuth code form ../auth/passAuth.js file
+require('../auth/passAuth')
+
 router.use(express.urlencoded({extended: false})) // scrape email and pwd from request header 
 router.use(express.json())  //req.body
 
