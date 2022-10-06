@@ -12,7 +12,6 @@ import App from './App'
 import BaseLayout from './components/layout/BaseLayout'
 import Products from './components/Products'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import rootReducer from './reducers'
 
 const persistConfig = {
