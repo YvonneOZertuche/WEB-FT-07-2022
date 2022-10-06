@@ -83,4 +83,11 @@ router.post('/register', async (req, res)=>{
 
 })
 
+
+router.post('/login', MIDDLEWARE,  (req, res)=>{
+
+    res.send('JWT')
+})
+
+
 module.exports = router;
