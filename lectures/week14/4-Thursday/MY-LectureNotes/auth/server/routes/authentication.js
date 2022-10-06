@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const jwt = require('jwt-simple')
-const secrets = require('./secrets')
+const secrets = require('../secrets')
 
 //this function returns JWT
 //{id, email, password, createdAt, updatedAt}
