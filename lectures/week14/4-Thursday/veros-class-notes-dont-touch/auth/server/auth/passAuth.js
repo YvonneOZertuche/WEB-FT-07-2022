@@ -32,7 +32,7 @@ const secrets = require('../secrets');
     try{
         //check if email is in our db 
 
-        let records = db.users.findAll({where: {email}})  //[{}, {}, {}]
+        let records = await db.users.findAll({where: {email}})  //[{}, {}, {}]
 
         if(records !== null){
             // if the email was found 
