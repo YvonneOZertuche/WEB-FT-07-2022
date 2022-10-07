@@ -5,6 +5,6 @@ let port = 3001
 
 app.use(require('./routes/authentication'))
 
-app.listen(port, (req, res) => {
+app.listen(port, () => {
    console.log(`Listening on port: ${port}`)
 })
