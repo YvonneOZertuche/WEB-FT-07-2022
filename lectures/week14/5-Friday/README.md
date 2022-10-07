@@ -15,6 +15,8 @@ After completing this lesson, you will be able to:
 
 ## 🟣Labs 
 
+[auth client](https://github.com/veros-labs/lab-auth-client-starter.git)
+
 ## 🟠Homework 
 
 ## 🔵Helpful Videos
