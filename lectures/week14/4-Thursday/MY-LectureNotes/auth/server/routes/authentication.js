@@ -14,6 +14,10 @@ const token = (userRecord) => {
 
 }
 
+router.post('/login', MIDDLEWARE, (req, res ) => {
+
+    res.send('JWT')
+  })
 
 
 
